@@ -1,0 +1,9 @@
+{application, erlfab,
+ [
+  {description, "Erlang File Access Benchmark"},
+  {vsn, "0.1"},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]}
+ ]}.
