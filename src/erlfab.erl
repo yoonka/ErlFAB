@@ -8,7 +8,7 @@
 start() ->
     %% e.g. start("/path/to/zotonic/modules", 1, 500, 20).
     {ok, Cwd} = file:get_cwd(),
-    start(Cwd, 1, 1000, 1000).
+    start(Cwd, 1, 500, 20).
 
 start(StartDir, Descent, Pick, Repeat) ->
     Cwd = StartDir ++ "/",
