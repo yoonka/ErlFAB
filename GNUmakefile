@@ -13,3 +13,9 @@ REBAR_URL=http://cloud.github.com/downloads/basho/rebar/rebar
 all: $(REBAR)
 	$(REBAR) compile
 	erl -pa ebin -run erlfab -noshell -s init stop
+
+compile: $(REBAR)
+	$(REBAR) compile
+
+shell: compile
+	erl -pa ebin -run erlfab void

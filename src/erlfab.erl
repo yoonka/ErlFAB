@@ -1,9 +1,12 @@
 -module(erlfab).
 
--export([start/0, start/4]).
+-export([void/0, start/0, start/4]).
 
 %%% Internal exports
 -export([benchmark/6]).
+
+void()->
+    ok.
 
 start() ->
     %% e.g. start("/path/to/zotonic/modules", 1, 500, 20).
@@ -95,7 +98,7 @@ pick_files(Pick, Len, Files, Acc) ->
 
 benchmark(Cwd, Dirs, Files, Fun, Repeat) ->
     Params = [length(Files), length(Dirs), Repeat],
-    io:format("Bechmarking access to ~B files in ~B folders repeated ~B times...\n", Params),
+    io:format("Benchmarking access to ~B files in ~B folders repeated ~B times...\n", Params),
 
     {Hit, Miss, L} = test_loop(Cwd, Dirs, Files, Fun, Repeat, 0, 0, []),
     Length = length(L),
