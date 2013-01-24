@@ -7,9 +7,9 @@ This is a simple benchmark to test file access time of Erlang functions. It was 
 
 To start the benchmark invoke `erlfab:start/0` or `erlfab:start/4`. Function `start/0` invokes `start/4` with default parameters (see https://github.com/yoonka/ErlFAB/blob/master/src/erlfab.erl). There are three Makefile targets to help with executing the test:
 
-`compile:` just compile
-`shell:` start Erlang shell with binary path pointing to ebin
-`all:` compile and execute with default parameters
+* `compile:` just compile
+* `shell:` start Erlang shell with binary path pointing to ebin
+* `all:` compile and execute with default parameters
 
 For example, to execute benchmark in interactive mode:
 
@@ -28,9 +28,9 @@ For example, assume the following directory structure:
     DirA/SubDirB/File2
     DirB/SubDirC/SubDirD/File3
 
-If `Descent` is 1 top folders are `DirA` and `DirB`.
-If `Descent` is 2 top folders are `DirA/SubdirA`, `DirA/SubDirB`, and `DirB/SubDirC`.
-If `Descent` is 3 top folders are `DirB/SubDirC/SubDirD`.
+* If `Descent` is 1 top folders are `DirA` and `DirB`.
+* If `Descent` is 2 top folders are `DirA/SubdirA`, `DirA/SubDirB`, and `DirB/SubDirC`.
+* If `Descent` is 3 top folders are `DirB/SubDirC/SubDirD`.
 
 Files in sub-folders while the procedure is descending are ignored.
 
